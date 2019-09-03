@@ -1,0 +1,47 @@
+.correct {
+  background: rgb(83, 206, 83);
+}
+.incorrect {
+  background: rgb(228, 77, 77);
+}
+
+button {
+  background: purple;
+  position: relative;
+  font-size: 15px;
+  left: 50%;
+  transform: translateX(-100px);
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+}
+button:hover {
+  background: green;
+}
+.wrapper {
+  border: none;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  padding: 10px;
+  box-shadow: none;
+}
+div {
+  margin-left: 0;
+  position: relative;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.418);
+  border-radius: 10px;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  color: white;
+}

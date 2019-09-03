@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+}
+body {
+  font-family: "Gayathri", sans-serif;
+  background: url("./assets/77_Ghostbusters.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}

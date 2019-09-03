@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <h1>{{ user.username }} scored {{ user.score }} points!</h1>
+  <div
+    *ngFor="let question of questionList; index as i"
+    [ngClass]="answers[i] === question.answer ? 'correct' : 'incorrect'"
+  >
+    <p>{{ question.question_name }}</p>
+    <ul>
+      <li *ngIf="answers[i] === question.answer">CORRECT!</li>
+      <li>A. {{ question.choice_1 }}</li>
+      <li>B. {{ question.choice_2 }}</li>
+      <li>C. {{ question.choice_3 }}</li>
+      <li>D. {{ question.choice_4 }}</li>
+      <li *ngIf="answers[i] !== question.answer">
+        <strong> The correct answer is : {{ question.answer }}</strong>
+      </li>
+    </ul>
+  </div>
+  <BUTTON routerLink="/Scores">CHECK TOP SCORES!</BUTTON>
+</div>

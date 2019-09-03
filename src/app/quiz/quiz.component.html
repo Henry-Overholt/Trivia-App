@@ -1,0 +1,55 @@
+<button class="startButton" *ngIf="!this.show" (click)="showForm()">
+  Take Quiz!
+</button>
+
+<form
+  *ngIf="this.show"
+  #questionForm="ngForm"
+  (ngSubmit)="handleQuestions(questionForm)"
+>
+  <p *ngIf="this.show">Test Your Ghostbusters Knowledge!</p>
+  <div *ngFor="let question of questionList; index as i">
+    <label for="questions">{{ question.question_name }}</label>
+    <ul>
+      <li>
+        <input
+          type="radio"
+          name="{{ i }}"
+          value="{{ question.choice_1 }}"
+          ngModel
+        />{{ question.choice_1 }}
+      </li>
+      <li>
+        <input
+          type="radio"
+          name="{{ i }}"
+          value="{{ question.choice_2 }}"
+          ngModel
+        />{{ question.choice_2 }}
+      </li>
+      <li>
+        <input
+          type="radio"
+          name="{{ i }}"
+          value="{{ question.choice_3 }}"
+          ngModel
+        />{{ question.choice_3 }}
+      </li>
+      <li>
+        <input
+          type="radio"
+          name="{{ i }}"
+          value="{{ question.choice_4 }}"
+          ngModel
+        />{{ question.choice_4 }}
+      </li>
+    </ul>
+  </div>
+  <div class="nameInput">
+    <label for="username">Enter your Name:</label>
+    <input type="text" name="username" ngModel />
+  </div>
+  <div class="submit">
+    <button class="submitbtn">Submit your Answers!</button>
+  </div>
+</form>

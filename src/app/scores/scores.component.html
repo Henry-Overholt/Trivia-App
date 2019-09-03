@@ -1,0 +1,11 @@
+<main>
+  <h1>Scores!</h1>
+  <ol>
+    <li *ngFor="let score of scoresList; index as i">
+      <div>
+        <p>{{ score.username }}</p>
+        <p>{{ score.score }}</p>
+      </div>
+    </li>
+  </ol>
+</main>
